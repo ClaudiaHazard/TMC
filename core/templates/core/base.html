@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Cumplo la plataforma de financiamiento colaborativo más grande de América latina</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-card-4">
+  <div class="w3-container" style="background-color:#00ba68">
+    <h2 style="font-family: 'Roboto', sans-serif;color:#FFFFFF;">Cálculo de TMC</h2>
+  </div>
+  <form class="w3-container" action="" method = "POST">
+    {% csrf_token %}
+    <p>      
+    <label class="w3-text" style="color:#252525"><b>Monto en UF</b></label>
+    {{form.monto}}</p>
+    <p>      
+    <label class="w3-text" style="color:#252525"><b>Plazo en días</b></label>
+    {{form.plazo}}</p>
+    <p>
+    <label class="w3-text" style="color:#252525"><b>Fecha</b></label>
+    {{form.fecha}}</p>
+    <p>
+    <button class="w3-btn w3-round-large" style="background-color:#00ba68; color:#FFFFFF" >Calcular</button></p>
+  </form>
+    <form class="w3-container" action="">
+    <p>      
+    <label class="w3-text" style="color:#252525"><b>{{ val }}</b></label>
+  </form>
+
+
+</div>
+
+</body>
+
+</html> 
