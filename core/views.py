@@ -88,8 +88,12 @@ def base(request):
                             context['val'] = i
                         elif ((monto < 5000) and ('Inferiores' in i['SubTitulo'] and ('5.000' in i['SubTitulo']))):
                             context['val'] = i
-            context['tmc']='El TMC corresponde a '+context['val']['Valor']+'%.'
-            context['val']='Sujeto a '+context['val']['Titulo']+', '+context['val']['SubTitulo']+'.' 
+            if context['val']!=data['TMCs']:
+                context['tmc']='El TMC corresponde a '+context['val']['Valor']+'%.'
+                context['val']='Sujeto a '+context['val']['Titulo']+', '+context['val']['SubTitulo']+'.' 
+            else:
+                context['val']='No encontrado'
+                context['tmc']=''
 
     else: 
         form = TMCForm() 
